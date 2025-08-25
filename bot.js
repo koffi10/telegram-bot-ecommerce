@@ -15,12 +15,33 @@ const PORT = process.env.PORT || 3000;
 // ... le reste du code est bon ...
 
 // Initialisation du bot
-const bot = new TelegramBot(BOT_TOKEN, { polling: true });
+const bot = new TelegramBot(BOT_TOKEN)
 
 // Webhook pour Render/Heroku
 if (process.env.NODE_ENV === 'production') {
-  const WEBHOOK_URL = process.env.WEBHOOK_URL || `https://votre-app.render.com/webhook/${BOT_TOKEN}`;
-  bot.setWebHook(WEBHOOK_URL);
+  const express = require('express');
+  const app = express();
+  
+  app.use(express.json());
+  
+  app.post(`/webhook/${BOT_TOKEN}`, (req, res) => {
+    bot.processUpdate(req.body);
+    res.sendStatus(200);
+  });
+  
+  app.get('/', (req, res) => {
+    res.send('🤖 Bot E-commerce Telegram opérationnel!');
+  });
+  
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Serveur webhook démarré sur le port ${PORT}`);
+  });
+  
+  const WEBHOOK_URL = process.env.WEBHOOK_URL + `/webhook/${BOT_TOKEN}`;
+  bot.setWebHook(WEBHOOK_URL)
+    .then(() => console.log(`✅ Webhook configuré: ${WEBHOOK_URL}`))
+    .catch(console.error);
 }
 
 // Structure des données
