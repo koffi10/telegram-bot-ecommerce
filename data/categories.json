@@ -1,0 +1,18 @@
+{
+  "electronics": {
+    "name": "📱 Électronique",
+    "description": "Smartphones, ordinateurs, accessoires tech"
+  },
+  "clothing": {
+    "name": "👕 Vêtements",
+    "description": "Mode homme et femme"
+  },
+  "accessories": {
+    "name": "💎 Accessoires",
+    "description": "Bijoux, montres, sacs"
+  },
+  "home": {
+    "name": "🏠 Maison",
+    "description": "Décoration, meubles, électroménager"
+  }
+}

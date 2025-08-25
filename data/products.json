@@ -1,0 +1,47 @@
+{
+  "prod_001": {
+    "name": "iPhone 15 Pro",
+    "category": "electronics",
+    "price": 1199.99,
+    "description": "Smartphone Apple dernière génération avec appareil photo professionnel",
+    "image": "📱",
+    "stock": 15,
+    "active": true
+  },
+  "prod_002": {
+    "name": "MacBook Air M2",
+    "category": "electronics",
+    "price": 1299.99,
+    "description": "Ordinateur portable ultra-léger avec puce M2",
+    "image": "💻",
+    "stock": 8,
+    "active": true
+  },
+  "prod_003": {
+    "name": "T-shirt Premium",
+    "category": "clothing",
+    "price": 29.99,
+    "description": "T-shirt 100% coton bio, coupe moderne",
+    "image": "👕",
+    "stock": 50,
+    "active": true
+  },
+  "prod_004": {
+    "name": "Montre Connectée",
+    "category": "accessories",
+    "price": 299.99,
+    "description": "Montre intelligente avec GPS et suivi santé",
+    "image": "⌚",
+    "stock": 25,
+    "active": true
+  },
+  "prod_005": {
+    "name": "Aspirateur Robot",
+    "category": "home",
+    "price": 399.99,
+    "description": "Aspirateur intelligent avec navigation laser",
+    "image": "🤖",
+    "stock": 12,
+    "active": true
+  }
+}
